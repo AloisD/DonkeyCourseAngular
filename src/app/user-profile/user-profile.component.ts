@@ -15,14 +15,14 @@ export class UserProfileComponent implements OnInit {
     photo : 'https://randomuser.me/api/portraits/lego/2.jpg'
   };
 
-  ageVisible = false;
+  ageVisible:boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggleAge() {
+  toggleAge():void {
     this.ageVisible = !this.ageVisible;
   }
 
