@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ROUTES } from './app.routes';
@@ -15,6 +16,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { AppCreateDonkeyComponent } from './app-create-donkey/app-create-donkey.component';
 import { AppListDonkeyComponent } from './app-list-donkey/app-list-donkey.component';
 import { AppUserDonkeyComponent } from './app-user-donkey/app-user-donkey.component';
+import { SearchMovieComponent } from './search-movie/search-movie.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,14 @@ import { AppUserDonkeyComponent } from './app-user-donkey/app-user-donkey.compon
     SignUpComponent,
     AppCreateDonkeyComponent,
     AppListDonkeyComponent,
-    AppUserDonkeyComponent
+    AppUserDonkeyComponent,
+    SearchMovieComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [],
