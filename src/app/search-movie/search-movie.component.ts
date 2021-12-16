@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { FormArray } from '@angular/forms';
+import { Movie } from '../Movie';
+import { isRequiredValidator } from '../isRequiredValidator';
 
 
 @Component({
@@ -11,8 +13,10 @@ import { FormArray } from '@angular/forms';
 })
 export class SearchMovieComponent implements OnInit {
   searchMovieForm = this.fb.group({
-    id: ['', Validators.required],
-    title: ['', Validators.required],
+    movie: this.fb.group({
+      id: [''],
+      title: ['']
+    }, { validators: isRequiredValidator }),
     type: ['', Validators.required],
     year: ['', Validators.required],
     information: ['', Validators.required]
@@ -24,7 +28,8 @@ export class SearchMovieComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.searchMovieForm.value);
+    const searchedMovie: Movie = this.searchMovieForm.value;
+    console.log(searchedMovie);
   }
 
 }

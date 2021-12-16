@@ -1,10 +1,13 @@
 <h2>Search movie </h2>
 <form [formGroup]="searchMovieForm" (ngSubmit)="onSubmit()">
-  <label for="id">Identifier: </label>
-  <input class="form-control" id="id" type="text" formControlName="id" required>
 
-  <label for="title">Title: </label>
-  <input class="form-control" id="title" type="text" formControlName="title">
+  <div formGroupName="movie">
+    <label for="id">Identifier: </label>
+    <input class="form-control" id="id" type="text" formControlName="id">
+
+    <label for="title">Title: </label>
+    <input class="form-control" id="title" type="text" formControlName="title">
+  </div>
 
   <label for="type">Type: </label>
   <select class="form-control" name="type" id="type" formControlName="type">
