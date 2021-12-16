@@ -1,0 +1,14 @@
+<h2>Fiche de contact</h2>
+
+<img [src]="User.photo" [alt]="User.name"/>
+
+<p>Nom : {{ User.name }}</p>
+<p>Prénom : {{ User.firstName }}</p>
+<p *ngIf="ageVisible">Âge : {{ User.age }} ans</p>
+<p>{{ User.quote }}</p>
+
+<input type="text" [(ngModel)]="User.quote">
+
+<div>
+  <button class="btn btn-primary" (click)="toggleAge()">Afficher/Masquer mon âge</button>
+</div>
