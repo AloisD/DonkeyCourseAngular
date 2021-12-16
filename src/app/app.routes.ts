@@ -5,7 +5,6 @@ import { AppComponent } from "./app.component";
 
 
 const ROUTES: Routes = [
-  { path: '', component: AppComponent },
   { path: 'create', component: AppCreateDonkeyComponent }
 ];
 
