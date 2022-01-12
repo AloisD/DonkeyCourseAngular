@@ -17,6 +17,8 @@ import { AppCreateDonkeyComponent } from './app-create-donkey/app-create-donkey.
 import { AppListDonkeyComponent } from './app-list-donkey/app-list-donkey.component';
 import { AppUserDonkeyComponent } from './app-user-donkey/app-user-donkey.component';
 import { SearchMovieComponent } from './search-movie/search-movie.component';
+import { DeveloperComponentComponent } from './developer-component/developer-component.component';
+import { SkillComponentComponent } from './skill-component/skill-component.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { SearchMovieComponent } from './search-movie/search-movie.component';
     AppCreateDonkeyComponent,
     AppListDonkeyComponent,
     AppUserDonkeyComponent,
-    SearchMovieComponent
+    SearchMovieComponent,
+    DeveloperComponentComponent,
+    SkillComponentComponent
   ],
   imports: [
     BrowserModule,

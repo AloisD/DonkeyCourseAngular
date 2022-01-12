@@ -3,8 +3,8 @@ import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { FormArray } from '@angular/forms';
 import { Movie } from '../Movie';
-import { isRequiredValidator } from '../isRequiredValidator';
-
+/* import { isRequiredValidator } from '../isRequiredValidator';
+ */
 
 @Component({
   selector: 'app-search-movie',
@@ -16,7 +16,7 @@ export class SearchMovieComponent implements OnInit {
     movie: this.fb.group({
       id: [''],
       title: ['']
-    }, { validators: isRequiredValidator }),
+    }/* , { validators: isRequiredValidator } */),
     type: ['', Validators.required],
     year: ['', Validators.required],
     information: ['', Validators.required]
